@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Women</title>
+    <link rel="icon" href="/logo.jpeg" type="image/x-icon">
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+		body {
+			background-image: url("https://indianmemetemplates.com/wp-content/uploads/women.jpg");
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			font-family: Arial, sans-serif;
+			color: white;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+		}
+		h1 {
+			font-size: 4rem;
+			margin: 0;
+			padding: 0;
+			text-shadow: 2px 2px #000000;
+		}
+		.three-d-button {
+			background-color: #af4c4c;
+			border: none;
+			color: white;
+			padding: 12px 24px;
+			text-align: center;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+			position: relative;
+			overflow: hidden;
+		}
+		.three-d-button::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 100%;
+			height: 100%;
+			width: 100%;
+			background-color: rgba(255, 255, 255, 0.15);
+			transform: translate3d(0, -100%, 0) skew(-15deg);
+			transition: transform 0.3s;
+		}
+		.three-d-button::after {
+			content: "";
+			position:absolute;
+			left: 0;
+			top: 100%;
+			height: 100%;
+			width: 100%;
+			background-color: rgba(0, 0, 0, 0.15);
+			transform: translate3d(0, -100%, 0) skew(15deg);
+			transition: transform 0.3s;
+		}
+		.three-d-button:hover::before {
+			transform: translate3d(0, 0, 0) skew(-15deg);
+		}
+		.three-d-button:hover::after {
+			transform: translate3d(0, 0, 0) skew(15deg);
+		}
+	</style>
+</head>
+<body>  
+	<h1>Women☕</h1>
+	<button class="three-d-button" onclick="playSound()">Women Check!</button>
+	<audio id="sound" src="Women Hahaha - Message Sound.mp3"></audio>
+	<script>
+		function playSound() {
+			var sound = document.getElementById("sound");
+			sound.play();
+			document.body.style.backgroundImage = "url('https://indianmemetemplates.com/wp-content/uploads/women.jpg')";
+			document.body.style.opacity = 0.6;
+		}
+	</script>
+</body>
+</html>
